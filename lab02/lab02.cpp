@@ -2,7 +2,7 @@
 
 #include <iostream>
 using namespace std;
-
+#include "ex_4.h"
 
 void ex_1()
 {
@@ -217,6 +217,16 @@ void ex_3()
 }
 
 
+void ex_4_1()
+{
+#define count_of_sum(x, y) x+y
+    for (int i = 0; i < 3; i++)
+    {
+        cout << "Вызываю функцию с параметром '2'\n";
+        ex_4(2);
+    }
+
+}
 
 
 
@@ -229,7 +239,7 @@ void make_choise()
     cout << "\nВведите номер задания для проверки\n";
     cout << "Для выхода введите 0\n";
     cin >> exercise;
-    cout << "Выбрано задание " << exercise << "/3\n";
+    cout << "Выбрано задание " << exercise << "/4\n";
 
     if (exercise == 1)
     {
@@ -244,6 +254,11 @@ void make_choise()
     else if (exercise == 3)
     {
         ex_3();
+        make_choise();
+    }
+    else if (exercise == 4)
+    {
+        ex_4_1();
         make_choise();
     }
     else if (exercise == 0)
